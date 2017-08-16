@@ -1,0 +1,13 @@
+<br>
+<div class='panel panel-primary'>
+    <div *ngIf="getSingleMovie">
+        <div class="card" style="width: 65rem;">
+            <div class="card-body" *ngIf="getSingleMovie">
+                <h4 class="card-title">Episode {{getSingleMovie.episode_id}} - {{getSingleMovie.title}}</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Released on {{getSingleMovie.release_date}} and produced by {{getSingleMovie.producer}}</h6>
+                <p class="card-text">Some notable opening crawls you might remember from the movie.<br> {{getSingleMovie.opening_crawl}}</p>
+                <button type="button" class="btn btn-info" (click)='onBack()'>Back</button>
+            </div>
+        </div>
+    </div>
+</div>

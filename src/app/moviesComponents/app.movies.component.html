@@ -1,0 +1,24 @@
+<br>
+<div class='panel panel-primary'>
+    <div class='panel-heading '>
+    </div>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class="table">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Title</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movies of getMovies.results">
+                        <td>{{movies.title}}</td>
+                        <td><a [routerLink]="['/movies', movies.url]">Detail</a></td>
+                        <br><br>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

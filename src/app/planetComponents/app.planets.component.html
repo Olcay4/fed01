@@ -1,0 +1,29 @@
+<br>
+<div class='panel panel-primary'>
+    <div class='panel-heading '>
+    </div>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class="table">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Planet Name</th>
+                        <th>Diameter</th>
+                        <th>Climate</th>
+                        <th>Terrain</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let planets of getPlanets.results">
+                        <td>{{planets.name}}</td>
+                        <td>{{planets.diameter}}</td>
+                        <td>{{planets.climate}}</td>
+                        <td>{{planets.terrain}}</td>
+                        <td>{{planets.population}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
