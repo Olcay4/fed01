@@ -12,11 +12,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let movies of getMovies.results">
-                        <td>{{movies.title}}</td>
-                        <td><a [routerLink]="['/movies', movies.url]">Detail</a></td>
-                        <br><br>
-                    </tr>
+                    <div *ngIf="getMovies">
+                        <tr *ngFor="let movies of getMovies.results">
+                            <td>{{movies.title}}</td>
+                            <td><a [routerLink]="['/movies', movies.url]">Detail</a></td>
+                            <br><br>
+                        </tr>
+                    </div>
                 </tbody>
             </table>
         </div>

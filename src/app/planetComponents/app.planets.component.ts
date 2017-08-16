@@ -9,7 +9,7 @@ import { Planets } from './../model/planets';
 export class PlanetsComponent implements OnInit {
   getPlanets: any[] = [];
 
-  constructor(private starwarsService: StarWarsService) {
+  constructor(public starwarsService: StarWarsService) {
   }
 
   /**
@@ -17,8 +17,6 @@ export class PlanetsComponent implements OnInit {
   */
   ngOnInit(): void {
     this.starwarsService.getPlanets()
-      .subscribe(res => this.getPlanets = res);
-
+      .subscribe(res => { this.getPlanets = res; });
   }
-
 }

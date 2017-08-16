@@ -13,9 +13,9 @@ export class PeoplesDetailComponent implements OnInit {
     getSinglePerson: string[];
     sub: any;
 
-    constructor(private _route: ActivatedRoute,
-        private _router: Router,
-        private _StarWarsService: StarWarsService) {
+    constructor(public _route: ActivatedRoute,
+        public _router: Router,
+        public _StarWarsService: StarWarsService) {
     }
 
     /**

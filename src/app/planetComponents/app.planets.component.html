@@ -15,13 +15,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let planets of getPlanets.results">
-                        <td>{{planets.name}}</td>
-                        <td>{{planets.diameter}}</td>
-                        <td>{{planets.climate}}</td>
-                        <td>{{planets.terrain}}</td>
-                        <td>{{planets.population}}</td>
-                    </tr>
+                    <div *ngIf="getPlanets">
+                        <tr *ngFor="let planets of getPlanets.results">
+                            <td>{{planets.name}}</td>
+                            <td>{{planets.diameter}}</td>
+                            <td>{{planets.climate}}</td>
+                            <td>{{planets.terrain}}</td>
+                            <td>{{planets.population}}</td>
+                        </tr>
+                    </div>
                 </tbody>
             </table>
         </div>

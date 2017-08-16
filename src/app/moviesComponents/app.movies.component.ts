@@ -9,7 +9,7 @@ import { Movies } from './../model/movies';
 export class MoviesComponent {
   getMovies: any[] = [];
 
-  constructor(private starwarsService: StarWarsService) {
+  constructor(public starwarsService: StarWarsService) {
   }
 
   /**

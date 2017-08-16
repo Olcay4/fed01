@@ -3,11 +3,12 @@
     <div class="text-center">
         <div class="card" style="width: 20rem;">
             <div class="card-body">
-                <h4 class="card-title">{{getSinglePerson.name}}</h4>
-                <p class="card-text">Height: {{getSinglePerson.height}} <br> Mass: {{getSinglePerson.mass}} <br> Hair Color: {{getSinglePerson.hair_color}}
-                    <br> Skin Color: {{getSinglePerson.skin_color}} <br> Eye Color: {{getSinglePerson.eye_color}} <br> Gender:
-                    {{getSinglePerson.gender}}
-                </p>
+                <div *ngIf="getSinglePerson">
+                    <h4 class="card-title">{{getSinglePerson.name}}</h4>
+                    <p class="card-text">Height: {{getSinglePerson.height}} <br> Mass: {{getSinglePerson.mass}} <br> Hair Color: {{getSinglePerson.hair_color}}
+                        <br> Skin Color: {{getSinglePerson.skin_color}} <br> Eye Color: {{getSinglePerson.eye_color}} <br>                        Gender: {{getSinglePerson.gender}}
+                    </p>
+                </div>
                 <button type="button" class="btn btn-info" (click)='onBack()'>Back</button>
             </div>
         </div>

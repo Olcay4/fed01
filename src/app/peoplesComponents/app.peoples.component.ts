@@ -9,7 +9,7 @@ import { Peoples } from './../model/peoples';
 export class PeoplesComponent implements OnInit {
   getPeoples: any[] = [];
 
-  constructor(private starwarsService: StarWarsService) {
+  constructor(public starwarsService: StarWarsService) {
   }
 
   /**

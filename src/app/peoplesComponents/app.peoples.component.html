@@ -12,11 +12,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let peeps of getPeoples.results">
-                        <td>{{peeps.name}}</td>
-                        <td><a [routerLink]="['/pc', peeps.url]">Check in Detail</a></td>
-                        <br><br>
-                    </tr>
+                    <div *ngIf="getPeoples">
+                        <tr *ngFor="let peeps of getPeoples.results">
+                            <td>{{peeps.name}}</td>
+                            <td><a [routerLink]="['/pc', peeps.url]">Check in Detail</a></td>
+                            <br><br>
+                        </tr>
+                    </div>
                 </tbody>
             </table>
         </div>

@@ -12,9 +12,9 @@ export class MoviesDetailComponent {
   getSingleMovie: string[];
   sub: any;
 
-   constructor(private _route: ActivatedRoute,
-        private _router: Router,
-        private _StarWarsMovieLink: StarWarsService) {
+   constructor(public _route: ActivatedRoute,
+        public _router: Router,
+        public _StarWarsMovieLink: StarWarsService) {
     }
 
   /**
